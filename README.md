@@ -1,5 +1,5 @@
 # drums
 
-JavaScript & HTMl5 project
+JavaScript & HTML5 project
 
 http://chupalapila.com/italodrums/
