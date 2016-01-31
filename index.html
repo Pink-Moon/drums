@@ -1,0 +1,156 @@
+
+<!--      
+          PINKMOON
+      ----------------
+      www.pink-moon.be
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Italo Drums</title>
+<style>
+
+body{
+  background-color: #000;
+  color: #fff;
+}
+
+.styleA {
+  background-image: url('img/computer.png');
+  color: pink;
+}
+
+.styleB {
+  background-image: url('img/tropical.png');
+  color: red;
+}
+
+.styleC {
+  background-image: url('img/chuck.jpg');
+  color: orange;
+}
+
+.styleD {
+  background-image: url('img/synth.png');
+  color: #000;
+}
+
+.styleE {
+  background-image: url('img/chandal.jpg');
+  color: red;
+}
+
+.styleF {
+  background-image: url('img/bach.jpg');
+  color: lightgreen;
+}
+
+.styleG {
+  background-image: url('img/arkanoid.jpg');
+  color: yellow;
+}
+
+</style>
+</head>
+<body onload="init();" id="panel">
+
+  <header>
+    <h1><blink>ItaloDrum</blink></h1>
+    <p>The Ultimate Multimedia Experience</p>
+            * Better in Chrome Browser *
+  </header>
+
+  <section>
+    <h2>Please use the keyboard: A , S , D , F , G , H , J</h2>
+    <audio controls loop="loop">
+    <source src="audio/loop.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <audio id="aAudio">
+    <source src="audio/kick.wav" type="audio/wav">
+  </audio>
+  <audio id="bAudio">
+    <source src="audio/volcakick.wav" type="audio/wav">
+  </audio>
+  <audio id="cAudio">
+    <source src="audio/snare.wav" type="audio/wav">
+  </audio>
+  <audio id="dAudio">
+    <source src="audio/volcasnare.wav" type="audio/wav">
+  </audio>
+  <audio id="eAudio">
+    <source src="audio/hihat.wav" type="audio/wav">
+  </audio>
+  <audio id="fAudio">
+    <source src="audio/crash.wav" type="audio/wav">
+  </audio>
+  <audio id="gAudio">
+    <source src="audio/motor.wav" type="audio/wav">
+  </audio>
+
+<script>
+
+  var canvas;
+  
+  function init() {
+    // This will work when you press a key, anywhere on the document
+    window.addEventListener('keydown', playPiano, false);
+  }
+ 
+  function playPiano(e) {
+
+      switch(e.keyCode) { 
+
+        case 65:   
+          document.getElementById('aAudio').play();
+          document.getElementById('aAudio').currentTime = 0;
+          document.getElementById("panel").className = "styleA";
+          break;
+
+        case 83: 
+          document.getElementById('bAudio').play();
+          document.getElementById('bAudio').currentTime = 0;
+          document.getElementById("panel").className = "styleB";
+          break;
+
+        case 68: 
+          document.getElementById('cAudio').play();
+          document.getElementById('cAudio').currentTime = 0;
+          document.getElementById("panel").className = "styleC";
+          break;
+
+        case 70: 
+          document.getElementById('dAudio').play();
+          document.getElementById('dAudio').currentTime = 0;
+          document.getElementById("panel").className = "styleD";
+          break;
+
+        case 71:
+          document.getElementById('eAudio').play();
+          document.getElementById('eAudio').currentTime = 0;
+          document.getElementById("panel").className = "styleE";
+          break;
+
+        case 72:
+          document.getElementById('fAudio').play();
+          document.getElementById('fAudio').currentTime = 0;
+          document.getElementById("panel").className = "styleF";
+          break;
+
+        case 74:
+          document.getElementById('gAudio').play();
+          document.getElementById('gAudio').currentTime = 0;
+          document.getElementById("panel").className = "styleG";
+          break;
+
+      }
+    
+  };
+</script>
+</body>
+</html>
